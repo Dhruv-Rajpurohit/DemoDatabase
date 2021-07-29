@@ -17,10 +17,9 @@
 		FA4F857726AEB6550027D8DC /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F857626AEB6550027D8DC /* Util.swift */; };
 		FA4F857B26AEB6B50027D8DC /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F857A26AEB6B50027D8DC /* DatabaseManager.swift */; };
 		FA4F858026AEB7730027D8DC /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F857F26AEB7730027D8DC /* DetailsModel.swift */; };
-		FA4F858926AEBD6A0027D8DC /* InsertDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F858826AEBD6A0027D8DC /* InsertDataViewController.swift */; };
 		FA4F859526AECAA30027D8DC /* FMDatabase.db in Resources */ = {isa = PBXBuildFile; fileRef = FA4F859426AECAA30027D8DC /* FMDatabase.db */; };
 		FA4F859826AECEC50027D8DC /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F859726AECEC50027D8DC /* InfoTableViewCell.swift */; };
-		FA4F859C26AEDD7A0027D8DC /* EditDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4F859B26AEDD7A0027D8DC /* EditDataViewController.swift */; };
+		FAEECD0D26B2797300B20ACB /* IandEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAEECD0C26B2797300B20ACB /* IandEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,10 +37,9 @@
 		FA4F857626AEB6550027D8DC /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		FA4F857A26AEB6B50027D8DC /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		FA4F857F26AEB7730027D8DC /* DetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
-		FA4F858826AEBD6A0027D8DC /* InsertDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertDataViewController.swift; sourceTree = "<group>"; };
 		FA4F859426AECAA30027D8DC /* FMDatabase.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = FMDatabase.db; sourceTree = "<group>"; };
 		FA4F859726AECEC50027D8DC /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
-		FA4F859B26AEDD7A0027D8DC /* EditDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDataViewController.swift; sourceTree = "<group>"; };
+		FAEECD0C26B2797300B20ACB /* IandEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IandEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				FA4F859426AECAA30027D8DC /* FMDatabase.db */,
-				FA4F858826AEBD6A0027D8DC /* InsertDataViewController.swift */,
-				FA4F859B26AEDD7A0027D8DC /* EditDataViewController.swift */,
+				FAEECD0C26B2797300B20ACB /* IandEditViewController.swift */,
 				FA4F857F26AEB7730027D8DC /* DetailsModel.swift */,
 				FA4F855D26AEB4BC0027D8DC /* SceneDelegate.swift */,
 				FA4F855B26AEB4BC0027D8DC /* AppDelegate.swift */,
@@ -229,13 +226,12 @@
 			files = (
 				FA4F856026AEB4BC0027D8DC /* ViewController.swift in Sources */,
 				FA4F859826AECEC50027D8DC /* InfoTableViewCell.swift in Sources */,
-				FA4F858926AEBD6A0027D8DC /* InsertDataViewController.swift in Sources */,
 				FA4F855C26AEB4BC0027D8DC /* AppDelegate.swift in Sources */,
 				FA4F857B26AEB6B50027D8DC /* DatabaseManager.swift in Sources */,
 				FA4F855E26AEB4BC0027D8DC /* SceneDelegate.swift in Sources */,
 				FA4F858026AEB7730027D8DC /* DetailsModel.swift in Sources */,
 				FA4F857726AEB6550027D8DC /* Util.swift in Sources */,
-				FA4F859C26AEDD7A0027D8DC /* EditDataViewController.swift in Sources */,
+				FAEECD0D26B2797300B20ACB /* IandEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

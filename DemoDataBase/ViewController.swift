@@ -36,11 +36,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         150
     }
-
+        
     @IBAction func btnInsertTapped(_ sender: Any) {
         let MainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let DV = MainStoryboard.instantiateViewController(withIdentifier: "InsertDataViewController") as! InsertDataViewController
+        let DV = MainStoryboard.instantiateViewController(withIdentifier: "IandEditViewController") as! IandEditViewController
         self.navigationController?.pushViewController(DV, animated: true)
+        DV.isEdit = false
+        DV.title = "Insert Data!"
     }
     
     @IBAction func btnEditTapped(_ sender: UIButton) {
@@ -48,7 +50,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var l = DetailsModel()
         l = getAllData.object(at: sender.tag) as! DetailsModel
         let MainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let DV = MainStoryboard.instantiateViewController(withIdentifier: "EditDataViewController") as! EditDataViewController
+        let DV = MainStoryboard.instantiateViewController(withIdentifier: "IandEditViewController") as! IandEditViewController
+        DV.title = "Update Data!"
+        DV.isEdit = true
         DV.getId = l.Id
         DV.getName = l.Name
         DV.getMobileNo = l.MobileNo
