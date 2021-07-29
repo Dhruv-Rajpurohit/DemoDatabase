@@ -2,7 +2,6 @@
 import UIKit
 
 class EditDataViewController: UIViewController {
-
     
     @IBOutlet weak var txtName: UITextField!
     
@@ -21,11 +20,10 @@ class EditDataViewController: UIViewController {
         txtMobileNo.text! = getMobileNo
         txtEmail.text! = getEmail
     }
-    
 
     @IBAction func btnUpdateTapped(_ sender: Any) {
         _ = DatabaseManager.shared.updateData(RecordId: getId, Name: txtName.text!, MobileNo: txtMobileNo.text!, Email: txtEmail.text!)
-    print("record updated")
+    print("Record Updated")
     }
 
 }

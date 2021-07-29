@@ -5,16 +5,13 @@ class InsertDataViewController: UIViewController {
 
     @IBOutlet weak var textName: UITextField!
     
-    
     @IBOutlet weak var textMobile: UITextField!
-    
     
     @IBOutlet weak var textEmail: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
 
     @IBAction func BtnForSavingData(_ sender: Any) {
         let FMDBInfo : DetailsModel = DetailsModel()
@@ -27,7 +24,7 @@ class InsertDataViewController: UIViewController {
             print("Insert Successful")
         }
         else{
-            print("Unsuccessful")
+            print("Insert Unsuccessful")
         }
     }
     

@@ -1,7 +1,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, buttonDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tblTableview: UITableView!
     
@@ -13,8 +13,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoTableViewCell") as! InfoTableViewCell
-        cell.editData = self
-        cell.tag = indexPath.row
+        cell.btnDeleteData.tag = indexPath.row
+        cell.btnEditData.tag = indexPath.row
+        
         var l = DetailsModel()
         l = getAllData.object(at: indexPath.row) as! DetailsModel
         cell.lblEmail.text! = l.Email
@@ -42,8 +43,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationController?.pushViewController(DV, animated: true)
     }
     
-    func EditButton(sender: InfoTableViewCell) {
-        let cell = sender.tag
+    @IBAction func btnEditTapped(_ sender: UIButton) {
+        _ = sender.tag
         var l = DetailsModel()
         l = getAllData.object(at: sender.tag) as! DetailsModel
         let MainStoryboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -55,8 +56,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.navigationController?.pushViewController(DV, animated: true)
     }
     
-    func DeleteButton(sender: InfoTableViewCell) {
-        let cell = sender.tag
+    @IBAction func btnDeleteTapped(_ sender: UIButton) {
+        _ = sender.tag
         var l = DetailsModel()
         l = getAllData.object(at: sender.tag) as! DetailsModel
         _ = DatabaseManager.shared.deleteData(RecordId: l.Id)
