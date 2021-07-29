@@ -1,9 +1,3 @@
-//
-//  SceneDelegate.swift
-//  DemoDataBase
-//
-//  Created by Macbook  on 26/07/21.
-//
 
 import UIKit
 
