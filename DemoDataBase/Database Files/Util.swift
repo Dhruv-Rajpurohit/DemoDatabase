@@ -2,8 +2,8 @@ import Foundation
 import UIKit
 
 class Util  {
-    
     static let share = Util()
+    
     func getPath(dbName : String) -> String{
         let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let fileUrl = documentDirectory.appendingPathComponent(dbName)
@@ -25,5 +25,4 @@ class Util  {
             }
         }
     }
-    
 }

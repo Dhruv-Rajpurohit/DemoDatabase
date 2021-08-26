@@ -6,4 +6,6 @@ class DetailsModel: NSObject {
     var Name : String = String()
     var MobileNo : String = String()
     var Email : String = String()
+    var photo : String = String()
+    var DOB : String = String()
 }

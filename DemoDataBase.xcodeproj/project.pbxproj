@@ -71,6 +71,42 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FA39C5A926CFD640005618E3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA4F857F26AEB7730027D8DC /* DetailsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA39C5AA26CFD667005618E3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAEECD0C26B2797300B20ACB /* IandEditViewController.swift */,
+				FA4F859726AECEC50027D8DC /* InfoTableViewCell.swift */,
+				FA4F855F26AEB4BC0027D8DC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA39C5AB26CFD6B5005618E3 /* Database Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA4F859426AECAA30027D8DC /* FMDatabase.db */,
+				FA4F857A26AEB6B50027D8DC /* DatabaseManager.swift */,
+				FA4F857626AEB6550027D8DC /* Util.swift */,
+			);
+			path = "Database Files";
+			sourceTree = "<group>";
+		};
+		FA39C5AC26CFD6E4005618E3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA4F856126AEB4BC0027D8DC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FA4F854F26AEB4BC0027D8DC = {
 			isa = PBXGroup;
 			children = (
@@ -92,16 +128,12 @@
 		FA4F855A26AEB4BC0027D8DC /* DemoDataBase */ = {
 			isa = PBXGroup;
 			children = (
-				FA4F859426AECAA30027D8DC /* FMDatabase.db */,
-				FAEECD0C26B2797300B20ACB /* IandEditViewController.swift */,
-				FA4F857F26AEB7730027D8DC /* DetailsModel.swift */,
-				FA4F855D26AEB4BC0027D8DC /* SceneDelegate.swift */,
+				FA39C5AC26CFD6E4005618E3 /* View */,
+				FA39C5AB26CFD6B5005618E3 /* Database Files */,
+				FA39C5AA26CFD667005618E3 /* Controller */,
+				FA39C5A926CFD640005618E3 /* Model */,
 				FA4F855B26AEB4BC0027D8DC /* AppDelegate.swift */,
-				FA4F859726AECEC50027D8DC /* InfoTableViewCell.swift */,
-				FA4F857626AEB6550027D8DC /* Util.swift */,
-				FA4F857A26AEB6B50027D8DC /* DatabaseManager.swift */,
-				FA4F855F26AEB4BC0027D8DC /* ViewController.swift */,
-				FA4F856126AEB4BC0027D8DC /* Main.storyboard */,
+				FA4F855D26AEB4BC0027D8DC /* SceneDelegate.swift */,
 				FA4F856426AEB4BD0027D8DC /* Assets.xcassets */,
 				FA4F856626AEB4BD0027D8DC /* LaunchScreen.storyboard */,
 				FA4F856926AEB4BD0027D8DC /* Info.plist */,

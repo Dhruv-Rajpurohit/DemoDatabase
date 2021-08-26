@@ -13,6 +13,10 @@ class InfoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var btnDeleteData: UIButton!
     
+    @IBOutlet weak var ImgInTableViewCell: UIImageView!
+    
+    @IBOutlet weak var DOBOnCell: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

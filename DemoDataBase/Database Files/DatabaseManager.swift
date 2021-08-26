@@ -3,9 +3,10 @@ import Foundation
 import FMDB
 
 class DatabaseManager {
-    
     static let dataBaseFileName = "FMDatabase.db"
+    
     static var database: FMDatabase!
+    
     static let shared : DatabaseManager = {
         let instance = DatabaseManager()
         return instance
@@ -59,7 +60,7 @@ class DatabaseManager {
     
     func insertData(_ modelname : DetailsModel) -> Bool{
         DatabaseManager.database.open()
-        let isSave = DatabaseManager.database.executeUpdate("INSERT INTO Info(Name,MobileNo,Email) VALUES (?,?,?);", withArgumentsIn: [modelname.Name,modelname.MobileNo,modelname.Email])
+        let isSave = DatabaseManager.database.executeUpdate("INSERT INTO Info(Name,MobileNo,Email,photo,DOB) VALUES (?,?,?,?,?);", withArgumentsIn: [modelname.Name,modelname.MobileNo,modelname.Email,modelname.photo,modelname.DOB])
         DatabaseManager.database.close()
         return isSave
     }
@@ -75,6 +76,8 @@ class DatabaseManager {
                 item.Name = String((resultset?.string(forColumn: "Name")) ?? "Undefined")
                 item.MobileNo = String((resultset?.string(forColumn: "MobileNo")) ?? "0")
                 item.Email = String((resultset?.string(forColumn: "Email")) ?? "Undefined")
+                item.photo = String((resultset?.string(forColumn: "photo")) ?? "Undefined")
+                item.DOB = String((resultset?.string(forColumn: "DOB")) ?? "Undefined")
                 itemInfo.add(item)
             }
         }
@@ -82,9 +85,9 @@ class DatabaseManager {
         return itemInfo
     }
     
-    func updateData(RecordId : Int, Name : String, MobileNo : String, Email : String) -> NSMutableArray{
+    func updateData(RecordId : Int, Name : String, MobileNo : String, Email : String, Photo : String, DOB : String) -> NSMutableArray{
         DatabaseManager.database.open()
-        let resultset : FMResultSet!  = DatabaseManager.database.executeQuery("UPDATE Info SET Name = ?, MobileNo = ?, Email = ? WHERE Id = ?", withArgumentsIn: [Name, MobileNo, Email, RecordId])
+        let resultset : FMResultSet!  = DatabaseManager.database.executeQuery("UPDATE Info SET Name = ?, MobileNo = ?, Email = ?, photo = ?, DOB = ? WHERE Id = ?", withArgumentsIn: [Name, MobileNo, Email, Photo, DOB, RecordId])
         let itemInfo : NSMutableArray = NSMutableArray()
         if (resultset != nil){
             while (resultset?.next())!{
@@ -93,6 +96,8 @@ class DatabaseManager {
                 item.Name = String((resultset?.string(forColumn: "Name")) ?? "Undefined")
                 item.MobileNo = String((resultset?.string(forColumn: "MobileNo")) ?? "0")
                 item.Email = String((resultset?.string(forColumn: "Email")) ?? "Undefined")
+                item.photo = String((resultset?.string(forColumn: "photo")) ?? "Undefined")
+                item.DOB = String((resultset?.string(forColumn: "DOB")) ?? "Undefined")
                 itemInfo.add(item)
             }
         }
@@ -111,6 +116,8 @@ class DatabaseManager {
                 item.Name = String((resultset?.string(forColumn: "Name")) ?? "Undefined")
                 item.MobileNo = String((resultset?.string(forColumn: "MobileNo")) ?? "0")
                 item.Email = String((resultset?.string(forColumn: "Email")) ?? "Undefined")
+                item.photo = String((resultset?.string(forColumn: "photo")) ?? "Undefined")
+                item.Email = String((resultset?.string(forColumn: "DOB")) ?? "Undefined")
                 itemInfo.add(item)
             }
         }
