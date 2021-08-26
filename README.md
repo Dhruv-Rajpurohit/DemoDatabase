@@ -1,0 +1,4 @@
+# DemoDatabase
+
+This is the final version of the app.
+You have now a working code of how CRUD operations can be performed in swift using FMDB Library and SQLite Database. Also, working with images was a challenge for me as first I created them using UUID and tried to store them in the database everything was working fine but as I was also updating the images under the Update Operation multiple images where found in the folder. So, I went with giving the image name which will have userID and some prefixes for better user readability and now as the ID was unique every time we created a new update operation the image used to get stored under the same ID, and so multiple images getting saved overhead was solved. But do keep in mind you need to remove prexisting image from document directory (removeItem) and then add the new image. Thanks!
