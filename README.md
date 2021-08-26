@@ -1,5 +1,6 @@
 CRUD Operations in sqlite table using Swift.
-
+Table needs to be created with following fields:
+Name, Email, PhoneNo, Image, DateOfBirth
 
 
 
